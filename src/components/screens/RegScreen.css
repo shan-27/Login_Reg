@@ -19,7 +19,7 @@ body{
 }
 
 .container{
-  max-width: 700px;
+  max-width: 650px;
   width: 100%;
   background-color: #fff;
   padding: 25px 30px;
@@ -42,23 +42,23 @@ body{
   margin: 20px 0 12px 0;
 }
 form .user-details .input-box{
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: calc(100% / 2 - 20px);
 }
 form .input-box span.details{
   display: block;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 .user-details .input-box input{
-  height: 45px;
+  height: 35px;
   width: 100%;
   outline: none;
-  font-size: 16px;
+  font-size: 14px;
   border-radius: 5px;
   padding-left: 15px;
   border: 1px solid #ccc;
-  border-bottom-width: 2px;
+  border-bottom-width: 1px;
   transition: all 0.3s ease;
 }
 .user-details .input-box input:focus,
@@ -66,15 +66,15 @@ form .input-box span.details{
   border-color: #fa1d0e;
 }
  form .gender-details .gender-title{
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
  }
 
  .gender-details .category{
    display: flex;
-   width: 80%;
-   margin: 14px 0 ;
-   justify-content: space-between;
+   width: 100%;
+   margin: 10px, 10px, 10px, 10px;
+   justify-content: space-evenly;
  }
 
  form .category label{
@@ -101,12 +101,17 @@ form .input-box span.details{
    display: none;
  }
  form .button{
-   height: 45px;
+   height: 40px;
    margin: 35px 0
  }
+.input-box .details{
+  font-size: 15px;
+}
+
+
  form .button input{
    height: 100%;
-   width: 100%;
+   width: 40%;
    border-radius: 5px;
    border: none;
    color: #fff;
@@ -115,11 +120,15 @@ form .input-box span.details{
    letter-spacing: 1px;
    cursor: pointer;
    transition: all 0.3s ease;
-   background: linear-gradient(135deg, #ad3a32, #fa1d0e);
+   background: linear-gradient(135deg, #ad3a32, #fa1d0e); 
  }
  form .button input:hover{
   /* transform: scale(0.99); */
   background: linear-gradient(-135deg, #ad3a32, #fa1d0e);
+  }
+
+  .button{
+    text-align: center;
   }
  @media(max-width: 584px){
  .container{
@@ -133,7 +142,7 @@ form .user-details .input-box{
     width: 100%;
   }
   .content form .user-details{
-    max-height: 300px;
+    max-height: 375px;
     overflow-y: scroll;
   }
   .user-details::-webkit-scrollbar{
