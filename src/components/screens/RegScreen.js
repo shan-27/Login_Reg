@@ -8,6 +8,15 @@ const RegScreen = () => {
 
     const {handleChange, values, handleSubmit, errors}= useForm(validateInfo);
 
+    function onlyNumberKey(evt) {
+          
+        // Only ASCII character in that range allowed
+        var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+        if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57))
+            return false;
+        return true;
+    }
+
 
 
     return (
@@ -34,15 +43,28 @@ const RegScreen = () => {
                     </div>
                     <div className="input-box">
                         <span className="details">Password :</span>
-                        <input type="text" placeholder="Enter your password" required/>
+                        <input 
+                            type="password"
+                            id='password'
+                            placeholder="Enter your password"
+                            required
+
+                        />
                     </div>
                     <div className="input-box">
                         <span className="details">Confirm Password :</span>
-                        <input type="text" placeholder="Confirm your password" required/>
+                        <input
+                            type="password"
+                            id='password2'
+                            placeholder="Confirm your password"
+                            required
+                            />
                     </div>
                     <div className="input-box">
                         <span className="details">Height (cm) :</span>
-                        <input type="text" placeholder="Height in centimeters" required/>
+                        <input type="text" placeholder="Height in centimeters" required
+                        onkeypress="return onlyNumberKey(event)"
+                        />
                     </div>
                     <div className="input-box">
                         <span className="details">Weight (kg) :</span>
