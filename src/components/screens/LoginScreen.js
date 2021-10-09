@@ -12,7 +12,7 @@ const LoginScreen = ({history})=>{
           <h3 className="login-screen__title">Login</h3>
          
           <div className="form-group">
-            <label htmlFor="email">Email:</label>
+            <label htmlFor="email" className="label">Email:</label>
             <input className="email_input"
               type="email"
               required
@@ -22,7 +22,7 @@ const LoginScreen = ({history})=>{
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">
+            <label htmlFor="password" className="label">
               Password:{" "}
               <Link to="/forgotpassword" className="login-screen__forgotpassword">
                 Forgot Password?
